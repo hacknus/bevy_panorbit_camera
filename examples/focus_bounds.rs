@@ -42,8 +42,8 @@ fn setup(
         PanOrbitCamera {
             // Shape can take Cuboid or Sphere
             focus_bounds_shape: Some(Cuboid::new(1.0, 1.0, 1.0).into()),
-            // Move the origin of the shape
-            focus_bounds_origin: Vec3::splat(1.0),
+            // Align bounds origin with the cube center
+            focus_bounds_origin: Vec3::new(0.0, 0.5, 0.0),
             ..default()
         },
     ));
@@ -51,5 +51,5 @@ fn setup(
 
 fn show_bounds(mut gizmos: Gizmos) {
     // Display focus bound shape
-    gizmos.cube(Transform::from_translation(Vec3::splat(1.0)), WHITE);
+    gizmos.cube(Transform::from_translation(Vec3::new(0.0, 0.5, 0.0)), WHITE);
 }

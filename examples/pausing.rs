@@ -35,7 +35,7 @@ fn setup(
     // Light
     commands.spawn((
         PointLight {
-            shadows_enabled: true,
+            shadow_maps_enabled: true,
             ..default()
         },
         Transform::from_xyz(4.0, 8.0, 4.0),
@@ -47,11 +47,6 @@ fn setup(
             use_real_time: true,
             ..default()
         },
-    ));
-    // Help text
-    commands.spawn(Text::new(
-        "\
-Press Space to pause the 'game'",
     ));
 }
 

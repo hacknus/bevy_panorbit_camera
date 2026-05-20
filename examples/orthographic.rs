@@ -18,8 +18,6 @@ fn setup(
     mut meshes: ResMut<Assets<Mesh>>,
     mut materials: ResMut<Assets<StandardMaterial>>,
 ) {
-    // help
-    commands.spawn(Text::new("Press R to switch projection".to_string()));
     // Ground
     commands.spawn((
         Mesh3d(meshes.add(Plane3d::default().mesh().size(5.0, 5.0))),
@@ -34,7 +32,7 @@ fn setup(
     // Light
     commands.spawn((
         PointLight {
-            shadows_enabled: true,
+            shadow_maps_enabled: true,
             ..default()
         },
         Transform::from_xyz(4.0, 8.0, 4.0),

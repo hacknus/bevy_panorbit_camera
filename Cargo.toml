@@ -37,3 +37,11 @@ required-features = ["bevy_egui"]
 [[example]]
 name = "egui_multiple_windows"
 required-features = ["bevy_egui"]
+
+[[example]]
+name = "orthographic"
+required-features = ["bevy/ui"]
+
+[[example]]
+name = "pausing"
+required-features = ["bevy/ui"]

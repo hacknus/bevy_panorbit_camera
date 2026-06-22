@@ -48,6 +48,11 @@ fn setup(
             ..default()
         },
     ));
+    // Help text
+    commands.spawn(Text::new(
+        "\
+Press Space to pause the 'game'",
+    ));
 }
 
 // Pauses the game (i.e. virtual time)
